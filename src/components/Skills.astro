@@ -1,0 +1,74 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<h2  >Skills</h2>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Front-End Developement</h2>
+		<p>HTML,CSS,TailwindCSS</p>
+		<p>JS,React-Js</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="dribbble-logo" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>UI Designing</h2>
+		<p>Figma</p>
+		<p>Adobe Photoshop</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>AI</h2>
+		<p>Data Analysis</p>
+		<p>Machine Learning</p>
+		<p>Natural Language Processing,Models and Techniques</p>
+		<p>Deep Learning and LLMs</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Software Testing</h2>
+		<p>Quality Assurance Testing Basics</p>
+		<p>Testing Principles and Methodologies</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
