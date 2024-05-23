@@ -20,13 +20,13 @@ import Grid from '../components/Grid.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						
+						I'm Yunisha Baskota, a passionate computer engineering graduate from TU, IOE Purwanchal Campus, Dharan. With a keen interest in web development and data analysis, I've worked on various projects that blend technology and innovation.
 					</p>
 					<p>
-						
+						My journey in tech started with my fascination for problem-solving and creating efficient solutions. Over the years, I've honed my skills through academic courses, online certifications, and hands-on projects.
 					</p>
 					<p>
-						
+						Currently, I'm focusing on enhancing my expertise in web development, data analysis, and quality assurance. I'm always eager to learn new technologies and contribute to meaningful projects.
 					</p>
 				</div>
 			</section>
@@ -34,19 +34,40 @@ import Grid from '../components/Grid.astro';
 				<h2 class="section-title">Education</h2>
 				<div class="content">
 					<p>
-						BE Computer Engineering | TU,IOE Purwanchal Campus, Dharan
+						<strong>BE Computer Engineering</strong> |<div class="content1">TU,IOE Purwanchal Campus, Dharan</div>
 					</p>
-					<p>
-						High School/(+2| Liverpool International College, Kathmandu
+					<!-- <div> -->
+						<p>
+						<strong>High School/(+2)</strong>|<div class="content1"> Liverpool International College, Kathmandu</div>
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						
-					</p>
+				<h2 class="section-title">Certifications</h2>
+				<div class="content certifications">
+					<div class="certification-card">
+						<h3>Data Analytics</h3>
+						<p>Coursera, Google</p>
+						<ul>
+							<li>Foundations: Data, Data, Everywhere - <strong>Certificate</strong></li>
+							<li>Ask Questions to Make Data-Driven Decisions - <strong>Ongoing</strong></li>
+						</ul>
+					</div>
+					<div class="certification-card">
+						<h3>Web Development</h3>
+						<p>ACES, Purwanchal Campus</p>
+						<ul>
+							<li>Basic PHP & Laravel Workshop - <strong>Certificate</strong></li>
+							<li>Web Development Training - <strong>Certificate</strong></li>
+						</ul>
+					</div>
+					<div class="certification-card">
+						<h3>Software Testing</h3>
+						<p>Coursera, University of Minnesota</p>
+						<ul>
+							<li>Introduction to Software Testing - <strong>Ongoing</strong></li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -60,8 +81,22 @@ import Grid from '../components/Grid.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+		padding: 2rem;
+	}
+	.hero {
+		text-align: center;
+		margin-bottom: 2rem;
 	}
 
+	.hero h1 {
+		font-size: 2.5rem;
+		color: #333;
+	}
+
+	.hero p {
+		font-size: 1.25rem;
+		color: #666;
+	}
 	img {
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
@@ -73,18 +108,79 @@ import Grid from '../components/Grid.astro';
 		flex-direction: column;
 		gap: 0.5rem;
 		color: var(--gray-200);
+		/* color: var(--accent-text-over); */
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		box-shadow: var(--shadow-sm)
+		margin-bottom: 2rem;
 	}
 
 	.section-title {
 		grid-column-start: 1;
 		font-size: var(--text-xl);
 		color: var(--gray-0);
+		/* color: var(--accent-text-over); */
+		margin-bottom: 1rem;
 	}
 
-	.content {
+	/* .content {
 		grid-column: 2 / 4;
+	} */
+	.content {
+		font-size: 1rem;
+		/* color: #555; */
+		/* color: var(--accent-text-over); */
+		line-height: 1.6;
 	}
 
+	.content p {
+		margin-bottom: 0.5rem;
+	}
+	.content1{
+		color: #555;
+		margin-bottom: 0.5rem;
+
+	}
+	.certifications {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.certification-card {
+		/* background-color: #e0f7fa; */
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-md);
+		padding: 1rem;
+		color: var(--accent-text-over);
+		
+	}
+
+	.certification-card h3 {
+		font-size: 1.25rem;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	.certification-card p {
+		font-size: 1rem;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	.certification-card ul {
+		list-style: disc;
+		margin-left: 1.5rem;
+	}
+
+	.certification-card ul li {
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+		color: white;
+	}
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
@@ -100,7 +196,9 @@ import Grid from '../components/Grid.astro';
 		.about {
 			display: grid;
 			grid-template-columns: 1fr 60% 1fr;
+			gap: 2rem;
 		}
+
 
 		.about > :global(:first-child) {
 			grid-column-start: 2;
@@ -109,6 +207,9 @@ import Grid from '../components/Grid.astro';
 		section {
 			display: contents;
 			font-size: var(--text-lg);
+		}
+		.certifications{
+			grid-column: 2 / 4 ;
 		}
 	}
 </style>
