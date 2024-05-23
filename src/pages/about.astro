@@ -49,7 +49,7 @@ import Grid from '../components/Grid.astro';
 						<h3>Data Analytics</h3>
 						<p>Coursera, Google</p>
 						<ul>
-							<li>Foundations: Data, Data, Everywhere - <strong>Certificate</strong></li>
+							<li>Foundations: Data, Data, Everywhere - <strong><a href="https://www.dropbox.com/scl/fi/taofndxab9fz9cak0lyig/Coursera-3NNFE4YW6JX7.pdf?rlkey=s3o8oqo6op52p1yfp6qda72ow&st=vem30mwt&dl=0">Certificate</a></strong></li>
 							<li>Ask Questions to Make Data-Driven Decisions - <strong>Ongoing</strong></li>
 						</ul>
 					</div>
@@ -57,8 +57,8 @@ import Grid from '../components/Grid.astro';
 						<h3>Web Development</h3>
 						<p>ACES, Purwanchal Campus</p>
 						<ul>
-							<li>Basic PHP & Laravel Workshop - <strong>Certificate</strong></li>
-							<li>Web Development Training - <strong>Certificate</strong></li>
+							<li>Basic PHP & Laravel Workshop - <strong><a href="https://www.dropbox.com/scl/fi/av4fm2ipj2809ggnu71rd/YunishaBaskota-1.jpg?rlkey=poly0udk5u1zcksec1ogjhf8o&st=hk2g7yxn&dl=0">Certificate</a></strong></li>
+							<li>Web Development Training - <strong><a href ="https://www.dropbox.com/scl/fi/lzeqshermvsrrzw6cgl1o/webdesign-taining.pdf?rlkey=ynd88lua0k2jknsc944siluwz&st=ztvhrafj&dl=0">Certificate</a></strong></li>
 						</ul>
 					</div>
 					<div class="certification-card">
@@ -70,6 +70,18 @@ import Grid from '../components/Grid.astro';
 					</div>
 				</div>
 			</section>
+			<section>
+				<h2 class="section-title">Memberships</h2>
+				<div class="content memberships">
+					<div class="membership-card">
+						<h5>Former President</h5>
+						<p>Purwanchal Dance Club<div class="content1">2023-2024</div></p>
+						</div>
+						<div class="membership-card">
+							<h5>Former Treasurer and Program Incharge</h5>
+							<p>Purwanchal Dance Club<div class="content1">2021-2023</div></p>
+						</div>
+						
 		</main>
 
 		<ContactCTA />
@@ -141,10 +153,24 @@ import Grid from '../components/Grid.astro';
 		margin-bottom: 0.5rem;
 
 	}
+	
 	.certifications {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		gap: 1.5rem;
+	}
+	.memberships {
+		display: flex;
+		flex-direction: column;
+		gap:1.5rem;
+	}
+	.membership-card{
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-md);
+		padding: 1rem;
+		color: var(--accent-text-over);
 	}
 
 	.certification-card {
