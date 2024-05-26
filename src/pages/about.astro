@@ -85,6 +85,8 @@ import Grid from '../components/Grid.astro';
 		</main>
 
 		<ContactCTA />
+		<a class="download-link" href="/assets/myresume.pdf" download>Download Resume</a>
+
 	</div>
 </BaseLayout>
 
@@ -184,6 +186,22 @@ import Grid from '../components/Grid.astro';
 		color: var(--accent-text-over);
 		
 	}
+	.download-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+    color: var(--accent-text-over);
+    border: 1px solid var(--accent-regular);
+    background-color: var(--accent-regular);
+    border-radius: 999rem;
+    font-size: var(--text-md);
+    line-height: 1.35;
+    width: auto; /* Set width to auto */
+    max-width: 200px; /* Set a maximum width for the button */
+    text-align: center; /* Center the text */
+    white-space: normal;
+    word-wrap: break-word;
+}
 
 	.certification-card h3 {
 		font-size: 1.25rem;
