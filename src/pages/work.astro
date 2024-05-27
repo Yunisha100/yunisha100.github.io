@@ -8,6 +8,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
+
 const projects = (await getCollection('work')).sort(
 	// (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
@@ -35,11 +36,13 @@ const projects = (await getCollection('work')).sort(
 		</main>
 		<ContactCTA />
 		<a class="download-link" href="/assets/myresume.pdf" download>Download Resume</a>
+
 	</div>
 </BaseLayout>
 
 <style>
-		.download-link {
+.download-link {
+
     display: inline-block;
     padding: 0.5rem 1rem;
     margin: 0.5rem auto;
