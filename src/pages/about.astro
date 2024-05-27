@@ -78,6 +78,17 @@ import Grid from '../components/Grid.astro';
 					</div>
 				</div>
 			</section>
+			<h2 class="section-title">Memberships</h2>
+				<div class="content memberships">
+					<div class="membership-card">
+						<h5>Former President</h5>
+						<p>Purwanchal Dance Club<div class="content1">2023-2024</div></p>
+						</div>
+						<div class="membership-card">
+							<h5>Former Treasurer and Program Incharge</h5>
+							<p>Purwanchal Dance Club<div class="content1">2021-2023</div></p>
+						</div>
+						
 		</main>
 
 		<ContactCTA />
@@ -171,6 +182,20 @@ import Grid from '../components/Grid.astro';
 		flex-direction: column;
 		gap: 1.5rem;
 	}
+	.memberships {
+		display: flex;
+		flex-direction: row;
+		gap:1.5rem;
+	}
+	.membership-card{
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-md);
+		padding: 1rem;
+		color: var(--accent-text-over);
+	}
+
 
 	.certification-card {
 		/* background-color: #e0f7fa; */
