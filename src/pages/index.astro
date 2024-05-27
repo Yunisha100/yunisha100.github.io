@@ -159,11 +159,23 @@ const projects = (await getCollection('work'))
 			display: flex;
 			gap: 0.5rem;
 		}
-		.download-link{
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
+
+		.download-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+    color: var(--accent-text-over);
+    border: 1px solid var(--accent-regular);
+    background-color: var(--accent-regular);
+    border-radius: 999rem;
+    font-size: var(--text-md);
+    line-height: 1.35;
+    width: auto; /* Set width to auto */
+    max-width: 200px; /* Set a maximum width for the button */
+    text-align: center; /* Center the text */
+    white-space: normal;
+    word-wrap: break-word;
+}
 
 		.hero img {
 			aspect-ratio: 3 / 4;

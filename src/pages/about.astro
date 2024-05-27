@@ -53,6 +53,12 @@ import Grid from '../components/Grid.astro';
 							<li>Ask Questions to Make Data-Driven Decisions - <strong>Ongoing</strong></li>
 						</ul>
 					</div>
+					
+					<div class="certification-card">
+						<h3>Software Quality Assurance</h3>
+						<p>Deerwalk Training Center</p>
+						<ul>
+							<li>Quality Assurance - <strong>Ongoing</strong></li>
 					<div class="certification-card">
 						<h3>Web Development</h3>
 						<p>ACES, Purwanchal Campus</p>
@@ -65,7 +71,7 @@ import Grid from '../components/Grid.astro';
 						<h3>Software Testing</h3>
 						<p>Coursera, University of Minnesota</p>
 						<ul>
-							<li>Introduction to Software Testing - <strong>Ongoing</strong></li>
+							<li>Introduction to Software Testing - <strong>Completed</strong></li>
 						</ul>
 					</div>
 				</div>
@@ -86,7 +92,6 @@ import Grid from '../components/Grid.astro';
 
 		<ContactCTA />
 		<a class="download-link" href="/assets/myresume.pdf" download>Download Resume</a>
-
 	</div>
 </BaseLayout>
 
@@ -116,6 +121,22 @@ import Grid from '../components/Grid.astro';
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
+	.download-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+    color: var(--accent-text-over);
+    border: 1px solid var(--accent-regular);
+    background-color: var(--accent-regular);
+    border-radius: 999rem;
+    font-size: var(--text-md);
+    line-height: 1.35;
+    width: auto; /* Set width to auto */
+    max-width: 200px; /* Set a maximum width for the button */
+    text-align: center; /* Center the text */
+    white-space: normal;
+    word-wrap: break-word;
+}
 
 	section {
 		display: flex;
