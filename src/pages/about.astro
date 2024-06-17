@@ -20,26 +20,30 @@ import Grid from '../components/Grid.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						I'm Yunisha Baskota, a passionate computer engineering graduate from TU, IOE Purwanchal Campus, Dharan. With a keen interest in web development and data analysis, I've worked on various projects that blend technology and innovation.
+						I'm Yunisha Baskota, a passionate computer engineering graduate from TU, IOE Purwanchal Campus, Dharan. With a keen interest in Quality Assurance,web development and data analysis, I've worked on various projects that blend technology and innovation.
 					</p>
 					<p>
 						My journey in tech started with my fascination for problem-solving and creating efficient solutions. Over the years, I've honed my skills through academic courses, online certifications, and hands-on projects.
 					</p>
 					<p>
-						Currently, I'm focusing on enhancing my expertise in web development, data analysis, and quality assurance. I'm always eager to learn new technologies and contribute to meaningful projects.
+						Currently, I'm focusing on enhancing my expertise in Quality Assurance. I'm always eager to learn new technologies and contribute to meaningful projects.
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
-				<div class="content">
+				<div class="content Education">
+					<div class="education-card">
 					<p>
 						<strong>BE Computer Engineering</strong> |<div class="content1">TU,IOE Purwanchal Campus, Dharan</div>
 					</p>
-					<!-- <div> -->
+					</div>
+					<div class="education-card">
 						<p>
 						<strong>High School/(+2)</strong>|<div class="content1"> Liverpool International College, Kathmandu</div>
 					</p>
+					</div>
+
 				</div>
 			</section>
 			<section>
@@ -61,6 +65,7 @@ import Grid from '../components/Grid.astro';
 							<li>Quality Assurance - <strong>Ongoing</strong></li>
 						</ul>
 						</div>
+
 					<div class="certification-card">
 						<h3>Web Development</h3>
 						<p>ACES, Purwanchal Campus</p>
@@ -73,7 +78,13 @@ import Grid from '../components/Grid.astro';
 						<h3>Software Testing</h3>
 						<p>Coursera, University of Minnesota</p>
 						<ul>
-							<li>Introduction to Software Testing - <strong>Completed</strong></li>
+							<li>Introduction to Software Testing - <strong><a href="https://www.dropbox.com/scl/fi/5c35zew2tl112ga47eb1d/IntrotoSoftwareTestingCoursera.pdf?rlkey=31t9vsqmjzrk6lartlz0vnh0d&st=n8ery2s1&dl=0">Certificate</a></strong></li>
+							<li>Black Box and White Box Testing -<strong>Ongoing</strong></li>
+							<li>Introduction to Automated Analysis -<strong>Ongoing</strong></li>
+						</ul>
+						<p>Test Automation University</p>
+						<ul>
+							<li>API Testing with Postman - <strong><a href="https://www.dropbox.com/scl/fi/ut6yaivqod2cbgxnd8bqo/APITestAutomationwithPostman.png?rlkey=9umrfk3kd4i0xa4qyqzjklb1r&st=b3pn681j&dl=0">Certificate</a></strong></li>
 						</ul>
 					</div>
 				</div>
@@ -179,37 +190,7 @@ import Grid from '../components/Grid.astro';
 
 	}
 	
-	.certifications {
-		display: flex;
-		flex-direction: row;
-		gap: 1.5rem;
-	}
-	.memberships {
-		display: flex;
-		flex-direction: column;
-		gap:1.5rem;
-	}
-	.membership-card{
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		box-shadow: var(--shadow-md);
-		padding: 1rem;
-		color: var(--accent-text-over);
-	}
-
-
-	.certification-card {
-		/* background-color: #e0f7fa; */
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background: var(--gradient-accent-orange);
-		box-shadow: var(--shadow-md);
-		padding: 1rem;
-		color: var(--accent-text-over);
-		
-	}
+	
 	.download-link {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -226,58 +207,94 @@ import Grid from '../components/Grid.astro';
     white-space: normal;
     word-wrap: break-word;
 }
+.certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
 
-	.certification-card h3 {
-		font-size: 1.25rem;
-		color: white;
-		margin-bottom: 0.5rem;
-	}
+.certification-card {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background: var(--gradient-accent-orange);
+    box-shadow: var(--shadow-md);
+    color: var(--accent-text-over);
+    flex: 1 1 calc(50% - 1.5rem); /* Two columns on larger screens */
+}
 
-	.certification-card p {
-		font-size: 1rem;
-		color: white;
-		margin-bottom: 0.5rem;
-	}
+.certification-card h3 {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
 
-	.certification-card ul {
-		list-style: disc;
-		margin-left: 1.5rem;
-	}
+.certification-card p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
 
-	.certification-card ul li {
-		margin-bottom: 0.5rem;
-		font-size: 1rem;
-		color: white;
-	}
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+.certification-card ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+.certification-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-			gap: 2rem;
-		}
+.memberships {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
+.membership-card {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    color: var(--accent-text-over);
+}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+.content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-		.certifications{
-			grid-column: 2 / 4 ;
-		}
-	}
+.content :global(a:hover),
+.content :global(a:focus) {
+    text-decoration-color: currentColor;
+}
+
+@media (min-width: 50em) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 60% 1fr;
+        gap: 2rem;
+    }
+
+    .about > :global(:first-child) {
+        grid-column-start: 2;
+    }
+
+    section {
+        display: contents;
+        font-size: var(--text-lg);
+    }
+
+    .certifications {
+        grid-column: 2 / 4;
+        gap: 2rem; /* Adjust gap for larger screens */
+    }
+
+    .certification-card {
+        flex: 1 1 calc(33.333% - 2rem); /* Three columns on larger screens */
+    }
+}
+
 </style>
