@@ -2,73 +2,163 @@
 import Icon from './Icon.astro';
 ---
 
-<section class="box skills">
-	<h2  >Skills</h2>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Front-End Developement</h2>
-		<p>HTML,CSS,TailwindCSS</p>
-		<p>JS,React-Js</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="dribbble-logo" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>UI Designing</h2>
-		<p>Figma</p>
-		<p>Adobe Photoshop</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>AI</h2>
-		<p>Data Analysis</p>
-		<p>Machine Learning</p>
-		<p>Natural Language Processing,Models and Techniques</p>
-		<p>Deep Learning and LLMs</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Software Testing</h2>
-		<p>Quality Assurance Testing Basics</p>
-		<p>Testing Principles and Methodologies</p>
-	</div>
+<section class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>Software Testing</h3>
+            <ul>
+                <li>Software Testing Life Cycle (STLC), Principles, Testing Methodologies, V-Model & Agile Model.</li>
+                <li>Test planning & preparation of Test Cases, Bug Tracking & Bug Reporting also executing the same.</li>
+                <li>Expertise in Manual Testing.</li>
+                <li>Automation Testing along with Selenium.</li>
+                <li>API Testing and Postman.</li>
+                <li>Unit Testing, Functional Testing, System Testing, and Regression Testing.</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>AI</h3>
+            <ul>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>Natural Language Processing, Models and Techniques</li>
+                <li>Deep Learning and LLMs</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>Web Development and Designing</h3>
+            <ul>
+                <li>UI Design - Figma</li>
+                <li>Photoshop</li>
+                <li>HTML, CSS, TailwindCSS</li>
+                <li>JavaScript, React.js</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>Programming Language and Database</h3>
+            <ul>
+                <li>C, C++</li>
+                <li>Python, Java</li>
+                <li>SQL, mySQL, PostgreSQL, Firebase</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>Project Management Tools</h3>
+            <ul>
+                <li>Github, MS-Office, Git</li>
+                <li>Jira, Canva</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+            <h3>Relevant skills</h3>
+            <ul>
+                <li>Communication and collaboration skills.</li>
+                <li>Adapts well to dynamic environments.</li>
+                <li>Strong Attention to Detail Mindset.</li>
+                <li>Enthusiastic about continuous learning and self-improvement.</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+    .skills-section {
+    border: 1px solid var(--gray-800);
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: var(--gray-900);
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 2rem 0;
+}
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+.section-title {
+    font-size: var(--text-2xl);
+    color: var(--accent-regular);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
 
-	.skills p {
-		color: var(--gray-400);
-	}
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background-color: var(--gray-800);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--gray-700);
+}
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+.skill-item h3 {
+    font-size: var(--text-xl);
+    color: var(--accent-regular);
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+.skill-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.skill-item ul li {
+    color: var(--gray-400);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 50em) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .skill-item h3 {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (min-width: 75em) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .skills-section {
+        padding: 3rem;
+    }
+
+    .skill-item {
+        padding: 2rem;
+    }
+
+    .skill-item h3 {
+        font-size: var(--text-3xl);
+    }
+}
+
 </style>
